@@ -1,6 +1,6 @@
 /** Angular Imports */
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 // Not Found Component
 import {NotFoundComponent} from './not-found/not-found.component';
@@ -21,8 +21,9 @@ const routes: Routes = [
  * Configures the fallback route.
  */
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule],
   providers: []
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
